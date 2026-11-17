@@ -206,6 +206,50 @@
     return p;
   }
 
+  /* ---------- yorumlar ---------- */
+  function renderReviews() {
+    var section = qs("#reviews");
+    var list = qs("#reviewList");
+    if (!section || !list) return;
+
+    var reviews = [];
+    state.products.forEach(function (p) {
+      if (p.reviews && p.reviews.length) reviews = reviews.concat(p.reviews);
+    });
+    if (!reviews.length) return;
+
+    list.innerHTML = "";
+    reviews.slice(0, 6).forEach(function (r) {
+      var box = document.createElement("div");
+      box.className = "quote";
+
+      var stars = document.createElement("div");
+      stars.className = "stars";
+      var n = Math.max(1, Math.min(5, Number(r.rating) || 5));
+      stars.textContent = "★".repeat(n);
+      box.appendChild(stars);
+
+      var text = document.createElement("p");
+      text.textContent = r.text || "";
+      box.appendChild(text);
+
+      var who = document.createElement("div");
+      who.className = "who";
+      var av = document.createElement("span");
+      av.className = "av";
+      av.textContent = (r.name || "?").trim().charAt(0).toUpperCase();
+      var label = document.createElement("span");
+      label.textContent = (r.name || "") + (r.tag ? " · " + r.tag : "");
+      who.appendChild(av);
+      who.appendChild(label);
+      box.appendChild(who);
+
+      list.appendChild(box);
+    });
+
+    section.hidden = false;
+  }
+
   function mountStickyBar(p) {
     var bar = qs("#stickybar");
     if (!bar || !p) return;
@@ -329,6 +373,7 @@
 
   function rerender() {
     mountSlots();
+    renderReviews();
     var grid = qs("#productGrid");
     if (grid) renderCards(grid);
     var detail = qs("#productDetail");
