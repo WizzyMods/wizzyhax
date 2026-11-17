@@ -206,6 +206,32 @@
     return p;
   }
 
+  /* ---------- gerçek satış sayısı ---------- */
+  function mountSocialProof() {
+    var el = qs("#socialProof");
+    if (!el) return;
+
+    function show(n) {
+      el.textContent = t("proof.sales", "{n} kişi satın aldı").replace("{n}", n);
+      el.hidden = false;
+    }
+
+    // Sadece önizleme: /?proof=5000 — bağlantı hiçbir yerde paylaşılmaz.
+    var preview = param("proof");
+    if (preview && /^\d+$/.test(preview)) {
+      show(preview);
+      return;
+    }
+
+    fetch("/api/istatistik", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || !d.ok || !d.show || !d.count) return;
+        show(d.count);
+      })
+      .catch(function () { /* sosyal kanıt kritik değil */ });
+  }
+
   /* ---------- yorumlar ---------- */
   function renderReviews() {
     var section = qs("#reviews");
@@ -374,6 +400,7 @@
   function rerender() {
     mountSlots();
     renderReviews();
+    mountSocialProof();
     var grid = qs("#productGrid");
     if (grid) renderCards(grid);
     var detail = qs("#productDetail");

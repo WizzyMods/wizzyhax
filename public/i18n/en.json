@@ -109,5 +109,6 @@
   "faq.q4": "Is installation hard?",
   "faq.a4": "No. Enter your key and you are done. Stuck? Message support any time.",
   "faq.q5": "Is the file safe?",
-  "faq.a5": "The pack is distributed only through Gumroad, directly from us. No third-party download sites, no shortlinks, no ads."
+  "faq.a5": "The pack is distributed only through Gumroad, directly from us. No third-party download sites, no shortlinks, no ads.",
+  "proof.sales": "{n} people bought this"
 }

@@ -109,5 +109,6 @@
   "faq.q4": "Kurulum zor mu?",
   "faq.a4": "Hayır. Anahtarını oyuna giriyorsun, hepsi bu. Takıldığın yerde 7/24 desteğe yazabilirsin.",
   "faq.q5": "Dosya güvenli mi?",
-  "faq.a5": "Paket yalnızca Gumroad üzerinden, doğrudan bizden dağıtılır. Üçüncü taraf indirme sitesi, kısa link veya reklam yok."
+  "faq.a5": "Paket yalnızca Gumroad üzerinden, doğrudan bizden dağıtılır. Üçüncü taraf indirme sitesi, kısa link veya reklam yok.",
+  "proof.sales": "{n} kişi satın aldı"
 }
