@@ -8,10 +8,10 @@
     },
     "price": { "amount": 5, "currency": "USD" },
     "badge": { "tr": "Ömür boyu", "en": "Lifetime" },
-    "gumroadUrl": "",
-    "gumroadPermalink": "robrun-lifetime",
-    "gumroadProductId": "",
-    "active": false,
+    "gumroadUrl": "https://tunahansen8.gumroad.com/l/jwhxdt",
+    "gumroadPermalink": "jwhxdt",
+    "gumroadProductId": "wcHL7B6yB4705zl8FWdeyA==",
+    "active": true,
     "features": {
       "tr": [
         "Tek seferlik ödeme, abonelik yok",
