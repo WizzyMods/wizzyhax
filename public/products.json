@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "robrun-lifetime",
+    "title": "Robrun Lifetime Cheat",
+    "subtitle": {
+      "tr": "Tek ödeme, ömür boyu erişim",
+      "en": "One payment, lifetime access"
+    },
+    "price": { "amount": 5, "currency": "USD" },
+    "badge": { "tr": "Ömür boyu", "en": "Lifetime" },
+    "gumroadUrl": "",
+    "gumroadPermalink": "robrun-lifetime",
+    "gumroadProductId": "",
+    "active": false,
+    "features": {
+      "tr": [
+        "Tek seferlik ödeme, abonelik yok",
+        "Ödeme sonrası anında lisans anahtarı",
+        "Paket güncellemeleri dahil",
+        "7 gün içinde iade hakkı"
+      ],
+      "en": [
+        "One-time payment, no subscription",
+        "License key delivered instantly",
+        "All future updates included",
+        "7-day refund window"
+      ]
+    }
+  }
+]

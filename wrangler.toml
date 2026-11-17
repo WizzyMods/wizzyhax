@@ -1,0 +1,14 @@
+# WizzyHax — Cloudflare Pages yapılandırması
+# Statik site: ./public  ·  API: ./functions/api/*
+# Build adımı yok; dosyalar olduğu gibi yayınlanır.
+
+name = "wizzyhax"
+pages_build_output_dir = "./public"
+compatibility_date = "2025-01-01"
+
+# D1 bağlaması: veritabanını oluşturduktan sonra aşağıdaki iki satırın
+# yorumunu kaldır ve database_id'yi doldur.
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "wizzyhax-db"
+# database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
