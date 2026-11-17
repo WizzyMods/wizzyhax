@@ -1,14 +1,22 @@
 # WizzyHax — Cloudflare Pages yapılandırması
 # Statik site: ./public  ·  API: ./functions/api/*
 # Build adımı yok; dosyalar olduğu gibi yayınlanır.
+#
+# Bu dosya deploy sırasında proje ayarlarının kaynağıdır.
+# Gizli değerler (KEY_SECRET, GUMROAD_ACCESS_TOKEN, BREVO_API_KEY, DEV_SECRET)
+# buraya YAZILMAZ; Cloudflare panelinde "Secret" olarak tanımlanır.
 
 name = "wizzyhax"
 pages_build_output_dir = "./public"
 compatibility_date = "2025-01-01"
 
-# D1 bağlaması: veritabanını oluşturduktan sonra aşağıdaki iki satırın
-# yorumunu kaldır ve database_id'yi doldur.
-# [[d1_databases]]
-# binding = "DB"
-# database_name = "wizzyhax-db"
-# database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+[vars]
+SITE_URL = "https://wizzyhax.pages.dev"
+DEFAULT_PRODUCT_SLUG = "robrun-lifetime"
+DEFAULT_PRODUCT_TITLE = "Robrun Lifetime Cheat"
+MAIL_FROM_NAME = "WizzyHax"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "wizzyhax-db"
+database_id = "f8b5e82e-fcf5-4435-b624-0656127ba5f4"
